@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Proza+Libre');
 
 body {
-  background: url('/assets/bg.png');
+  background: url('/assets/grey_wash_wall.png');
 }
 
 .booyah-box {
@@ -16,14 +16,13 @@ body {
   margin-top:10px;
   margin-bottom:10px;
   padding:10px;
-  font-color: 680b21;
   font-family: 'Proza Libre', sans-serif;
 }
 
 .instructions {
-  font-size: 25px;
+  font-size: 28px;
   font-family: 'Proza Libre', sans-serif;
-  font-color: 680b21;
+  color: black;
   font-weight: bold;
 }
 
@@ -33,10 +32,11 @@ body {
 }
 
 .add a{
-  color: #a00a04;
+  color: #510404;
   font-size: 25px;
-  border-bottom: 1px solid #a00a04;
-  border-top: 1px solid #a00a04;
+  border-bottom: 1px solid #510404;
+  border-top: 1px solid #510404;
+  font-weight: bold;
 }
 
 .footer-blurb {
