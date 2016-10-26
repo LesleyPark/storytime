@@ -11,36 +11,36 @@
 
 <header>
   <div class="instructions col-md-9">
-    <b>Keep the story going! Add a line of your own!</b>
+    Keep the story going! Add a line of your own!
   </div>
   <div class="add col-md-3">
-    <b><u><%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %></u></b>
+    <%= link_to 'Add a line', '#', data: {toggle: 'modal', target: '#myModal'} %>
     &nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </header>
 
 <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Add a line</h4>
-        </div>
-        <%= simple_form_for Line.new do |f| %>
-          <div class="modal-body">
-            <%= f.input :message, label: "So what happens next?"%>
-            <br />
-            <%= f.input :name, label: "Your name"%>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <%= f.submit 'Add', class: 'btn btn-primary' %>
-          </div>
-        <% end %>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add a line</h4>
       </div>
+      <%= simple_form_for Line.new do |f| %>
+        <div class="modal-body">
+          <%= f.input :message, label: "So what happens next?"%>
+          <br />
+          <%= f.input :name, label: "Your name"%>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit 'Add', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
     </div>
   </div>
+</div>
 
   <hr/>
   <br class="clear" />
@@ -52,6 +52,13 @@
     </div>
   <% end %>
   <%= yield %>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="footer-blurb">
+      Cobbled together in Los Angeles, CA by <a href="https://github.com/LesleyPark">Lesley</a><br />
+    </div>
 </div>
 
 
