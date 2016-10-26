@@ -9,9 +9,6 @@ class LinesController < ApplicationController
 
   def create
     Line.create(line_params)
-    if @line.invalid?
-      flash[:error] = '<strong>Could not save</strong> please make sure all fields are filled out.'
-    end
     redirect_to root_path
   end
 
